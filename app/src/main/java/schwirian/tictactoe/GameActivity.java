@@ -13,9 +13,10 @@ public class GameActivity extends AppCompatActivity {
             bot_left, bot_mid, bot_right,
             reset_button;
     TextView turn;
-    boolean is_x, winner;
+    boolean is_x, winner, draw;
     boolean tlc, tmc, trc, mlc, mmc, mrc, blc, bmc, brc;
     Button[][] but_array = new Button[3][3];
+    int turn_count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,9 @@ public class GameActivity extends AppCompatActivity {
 
         is_x = true;
 
-        winner = false;
+        winner = draw = false;
+
+        turn_count = 0;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
@@ -62,16 +65,22 @@ public class GameActivity extends AppCompatActivity {
         top_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!tlc && !winner) {
+                if (!tlc && !winner && !draw) {
                     tlc = true;
                     top_left.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -82,16 +91,22 @@ public class GameActivity extends AppCompatActivity {
         top_mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!tmc && !winner) {
+                if (!tmc && !winner && !draw) {
                     tmc = true;
                     top_mid.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -102,16 +117,22 @@ public class GameActivity extends AppCompatActivity {
         top_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!trc && !winner) {
+                if (!trc && !winner && !draw) {
                     trc = true;
                     top_right.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -122,16 +143,22 @@ public class GameActivity extends AppCompatActivity {
         mid_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!mlc && !winner) {
+                if (!mlc && !winner && !draw) {
                     mlc = true;
                     mid_left.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -142,16 +169,22 @@ public class GameActivity extends AppCompatActivity {
         mid_mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!mmc && !winner) {
+                if (!mmc && !winner && !draw) {
                     mmc = true;
                     mid_mid.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -162,16 +195,22 @@ public class GameActivity extends AppCompatActivity {
         mid_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!mrc && !winner) {
+                if (!mrc && !winner && !draw) {
                     mrc = true;
                     mid_right.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -182,16 +221,22 @@ public class GameActivity extends AppCompatActivity {
         bot_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!blc && !winner) {
+                if (!blc && !winner && !draw) {
                     blc = true;
                     bot_left.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -202,16 +247,22 @@ public class GameActivity extends AppCompatActivity {
         bot_mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!bmc && !winner) {
+                if (!bmc && !winner && !draw) {
                     bmc = true;
                     bot_mid.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -222,16 +273,22 @@ public class GameActivity extends AppCompatActivity {
         bot_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!brc && !winner) {
+                if (!brc && !winner && !draw) {
                     brc = true;
                     bot_right.setText(is_x ? "X" : "O");
+                    turn_count += 1;
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
                         winner = true;
                         reset_button.setVisibility(View.VISIBLE);
                     }
-                    if (!winner) {
+                    else if (turn_count == 9) {
+                        draw = true;
+                        turn.setText("Draw");
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner && !draw) {
                         is_x = !is_x;
                         String turn_text = "Turn: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
@@ -245,7 +302,7 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (reset_button.getVisibility() == View.VISIBLE) {
                     is_x = true;
-                    winner = false;
+                    winner = draw = false;
                     for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 3; j++) {
                             but_array[i][j].setText("");
