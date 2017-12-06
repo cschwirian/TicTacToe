@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_8aa0cd21edcef3fd2d9d62d99ab94ec9eb8024ca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="94691ebe773b1579fbbf2a2a68a64299849289b9">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1188f00cf28be4bb03ba188c1e59835d7982055a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/215fea114792786e4b99b76a5c9debc04e3080ce/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_96d629717322e057cf5365818deeb5ea0331ec1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/c25e9157bc3e9dbd17a4f6725aa7340accf2c2e3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9854deb0d3bdca019712d97e4752d5b035f2903e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_cc75024d20b0a308310c8732c8366c357fb7b80b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/9897bc26767db1fd56fc19cf0044c7e21a5bbf1a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b80ddd02fe381a71cbee3e3156c26927180e769a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/22ec6a4bb0061edd1e24b5c25e8f5c2898e1c3d4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_533c42c8d6db432d1f51d06102b78174abee343f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/dd267f9d199ed6a103c487beb6197db3c6289032/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c0d7682fdbfece26c668670be99fc81140434856/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/ebffc86eeba6ee8a0000beb7226883f4a2a646dc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_45bce915031d9443df4e3fa808611466189f6634/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_9167739388d8b0472b608044d5bf85e0c4b1238b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/974a476dda79d85e04a5ae567945e88d043d2161/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_45f149c831be6474eaea6f6fbcb8e76afa74dcc0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/44b18a29760ed9742cbb11a7de78190de81a5e06/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8c4701e3ba4b8a2875e1621929457ee755d8bd2a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/40ce8bc9f7831f4349705d4ef66436ea9226ea81/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_332baadece0c75e966c82f4954a79b227128e7e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/cschwirian/.android/build-cache/81d9a26a84ca45b62d52fee887b6e310ddafab5b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/Users/cschwirian/Desktop/cs399/TicTacToe/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eacefb7356052b30cf1d53133266f0259eca4a33/classes.dex" />
+    </item>
+
+</items>

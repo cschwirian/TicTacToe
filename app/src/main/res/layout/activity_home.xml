@@ -7,13 +7,15 @@
     tools:context="schwirian.tictactoe.HomeActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/play_button"
         android:layout_width="240dp"
         android:layout_height="100dp"
         android:text="Play"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="287dp" />
+        app:layout_constraintBottom_toTopOf="@+id/about_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
@@ -21,7 +23,22 @@
         android:layout_height="wrap_content"
         android:text="Tic Tac Toe"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="99dp" />
+        app:layout_constraintBottom_toTopOf="@+id/play_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        android:text="About"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_button" />
 
 </android.support.constraint.ConstraintLayout>

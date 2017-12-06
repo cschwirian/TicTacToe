@@ -7,14 +7,14 @@
 
     <TextView
         android:id="@+id/turn"
-        android:layout_width="360dp"
+        android:layout_width="166dp"
         android:layout_height="wrap_content"
         android:text="Turn: X"
         android:textAlignment="center"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,11 +24,11 @@
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/turn">
+        app:layout_constraintStart_toEndOf="@+id/turn"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="360dp"
@@ -123,9 +123,9 @@
         android:textSize="30sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/turn" />
 
 </android.support.constraint.ConstraintLayout>

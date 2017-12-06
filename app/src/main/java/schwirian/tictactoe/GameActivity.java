@@ -10,9 +10,10 @@ public class GameActivity extends AppCompatActivity {
 
     Button top_left, top_mid, top_right,
             mid_left, mid_mid, mid_right,
-            bot_left, bot_mid, bot_right;
+            bot_left, bot_mid, bot_right,
+            reset_button;
     TextView turn;
-    boolean is_x;
+    boolean is_x, winner;
     boolean tlc, tmc, trc, mlc, mmc, mrc, blc, bmc, brc;
     Button[][] but_array = new Button[3][3];
 
@@ -22,6 +23,8 @@ public class GameActivity extends AppCompatActivity {
         tlc = tmc = trc = mlc = mmc = mrc = blc = bmc = brc = false;
 
         is_x = true;
+
+        winner = false;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
@@ -35,6 +38,8 @@ public class GameActivity extends AppCompatActivity {
         bot_left = (Button) findViewById(R.id.bot_left);
         bot_mid = (Button) findViewById(R.id.bot_mid);
         bot_right = (Button) findViewById(R.id.bot_right);
+
+        reset_button = (Button) findViewById(R.id.reset_button);
 
         but_array[0][0] = top_left;
         but_array[0][1] = top_mid;
@@ -57,94 +62,198 @@ public class GameActivity extends AppCompatActivity {
         top_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!tlc) {
+                if (!tlc && !winner) {
                     tlc = true;
                     top_left.setText(is_x ? "X" : "O");
                     if (check(is_x ? "X" : "O")) {
                         String turn_text = "Winner: " + (is_x ? "X" : "O");
                         turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
                     }
-                    is_x = !is_x;
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         top_mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!tmc) {
+                if (!tmc && !winner) {
                     tmc = true;
                     top_mid.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         top_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!trc) {
+                if (!trc && !winner) {
                     trc = true;
                     top_right.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         mid_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!mlc) {
+                if (!mlc && !winner) {
                     mlc = true;
                     mid_left.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         mid_mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!mmc) {
+                if (!mmc && !winner) {
                     mmc = true;
                     mid_mid.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         mid_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!mrc) {
+                if (!mrc && !winner) {
                     mrc = true;
                     mid_right.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         bot_left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!blc) {
+                if (!blc && !winner) {
                     blc = true;
                     bot_left.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         bot_mid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!bmc) {
+                if (!bmc && !winner) {
                     bmc = true;
                     bot_mid.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
                 }
             }
         });
         bot_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!brc) {
+                if (!brc && !winner) {
                     brc = true;
                     bot_right.setText(is_x ? "X" : "O");
-                    is_x = !is_x;
+                    if (check(is_x ? "X" : "O")) {
+                        String turn_text = "Winner: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                        winner = true;
+                        reset_button.setVisibility(View.VISIBLE);
+                    }
+                    if (!winner) {
+                        is_x = !is_x;
+                        String turn_text = "Turn: " + (is_x ? "X" : "O");
+                        turn.setText(turn_text);
+                    }
+                }
+            }
+        });
+
+        reset_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (reset_button.getVisibility() == View.VISIBLE) {
+                    is_x = true;
+                    winner = false;
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < 3; j++) {
+                            but_array[i][j].setText("");
+                        }
+                    }
+                    turn.setText("Turn: X");
+                    reset_button.setVisibility(View.INVISIBLE);
+                    tlc = tmc = trc = mlc = mmc = mrc = blc = bmc = brc = false;
                 }
             }
         });
