@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/turn"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:text="Turn: X"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/turn">
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <Button
+                android:id="@+id/top_left"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="X"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/top_mid"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="O"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/top_right"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="X"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mid_left"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="O"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/mid_mid"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="X"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/mid_right"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="O"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bot_left"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="X"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/bot_mid"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:text="O"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/bot_right"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:text="X"
+                android:textSize="36sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Reset"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</android.support.constraint.ConstraintLayout>
