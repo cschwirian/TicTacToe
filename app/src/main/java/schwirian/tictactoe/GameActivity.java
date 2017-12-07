@@ -311,6 +311,7 @@ public class GameActivity extends AppCompatActivity {
                     turn.setText("Turn: X");
                     reset_button.setVisibility(View.INVISIBLE);
                     tlc = tmc = trc = mlc = mmc = mrc = blc = bmc = brc = false;
+                    turn_count = 0;
                 }
             }
         });
